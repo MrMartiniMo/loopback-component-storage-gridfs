@@ -149,3 +149,17 @@ GET /FileContainers/:containerName/zip
 
 Errors:
 * **404** No files to archive.
+
+<hr>
+
+### Download file inline
+
+```
+GET /FileContainers/:containerName/downloadInline/:fileId
+```
+
+* **containerName** - name of container
+* **fileId** - id of file to download
+
+Errors:
+* **404** File not found.
