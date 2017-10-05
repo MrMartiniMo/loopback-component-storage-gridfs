@@ -98,6 +98,23 @@ FileContainer.getFile({
 
 <hr>
 
+### Get file information by name
+
+```
+GET /FileContainers/:containerName/getFileByName/:filename
+```
+```javascript
+FileContainer.getFileByName({
+  containerName: 'containerName',
+  filename: 'filename'
+});
+```
+
+  * **containerName** - name of container
+  * **filename** - name of file
+
+<hr>
+
 ### Delete file
 
 ```
@@ -112,6 +129,23 @@ FileContainer.deleteFile({
 
 * **containerName** - name of container
 * **fileId** - id of file to delete
+
+<hr>
+
+### Delete file by filename
+
+```
+DELETE /FileContainers/:containerName/deleteFileByName/:filename
+```
+```javascript
+FileContainer.deleteFileByName({
+  containerName: 'containerName',
+  filename: 'filename'
+});
+```
+
+* **containerName** - name of container
+* **filename** - name of file to delete
 
 <hr>
 
@@ -159,7 +193,19 @@ GET /FileContainers/:containerName/downloadInline/:fileId
 ```
 
 * **containerName** - name of container
-* **fileId** - id of file to download
+* **fileId** - id of file to download in line
+
+Errors:
+* **404** File not found.
+
+### Download file inline by name
+
+```
+GET /FileContainers/:containerName/downloadInlineByName/:filename
+```
+
+* **containerName** - name of container
+* **filename** - name of file to download in line
 
 Errors:
 * **404** File not found.
